@@ -10,31 +10,34 @@ The system uses a hub-and-spoke model. The **Orchestrator** is the single point 
 
 ```text
 family-office/
-├── README.md                      # System overview and routing logic (this file)
-├── shared/                        # Global context for all skills
-│   ├── family_charter.md          # Core values, mission, and governance principles
-│   ├── entity_structures.json     # Anonymized trust, LLC, and corporate hierarchies
-│   └── contacts_directory.md      # Key advisors, vendors, and stakeholders
+├── README.md                       # System overview and routing logic (this file)
+├── shared/                         # Global context for all skills
+│   ├── family_charter.md           # Core values, mission, and governance principles
+│   ├── family_profile.md           # Family members and interests
+│   ├── entity_and_tax_map.md       # Anonymized trust, LLC, and corporate hierarchies
+│   ├── estate_and_risk_register.md # Insurance and risk information
+│   ├── master_balance_sheet.md     # Aggregate financial positions
+│   └── operations_vault.md.        # Key advisors, vendors, and stakeholders
 │
-├── orchestrator/                  # Central routing agent
-│   ├── instructions.md            # Intent recognition and delegation logic
-│   └── routing_schema.json        # Mapping of intents to specific personas
+├── orchestrator/                   # Central routing agent
+│   ├── instructions.md             # Intent recognition and delegation logic
+│   └── routing_schema.json         # Mapping of intents to specific personas
 │
-├── tax-estate-advisor/            # Persona: Tax and Estate Strategy
+├── tax-estate-advisor/             # Persona: Tax and Estate Strategy
 │   ├── instructions.md
-│   └── tax_reference.md           # Multi-state residency rules, FBAR/FATCA protocols
+│   └── tax_reference.md            # Multi-state residency rules, FBAR/FATCA protocols
 │
-├── wealthops-manager/             # Persona: Household and Concierge Operations
+├── wealthops-manager/              # Persona: Household and Concierge Operations
+│   ├── instructions.md 
+│   └── maintenance_templates.json  # Real estate upkeep, vendor tracking, travel specs
+│
+├── cio/                            # Persona: Chief Investment Officer
 │   ├── instructions.md
-│   └── maintenance_templates.json # Real estate upkeep, vendor tracking, travel specs
+│   └── investment_mandate.md       # Buy box criteria, liquidity rules, portfolio drift
 │
-├── cio/                           # Persona: Chief Investment Officer
-│   ├── instructions.md
-│   └── investment_mandate.md      # Buy box criteria, liquidity rules, portfolio drift
-│
-└── governance-facilitator/        # Persona: Philanthropy and Family Meetings
+└── governance-facilitator/         # Persona: Philanthropy and Family Meetings
     ├── instructions.md
-    └── meeting_frameworks.md      # Next-gen education and DAF management protocols
+    └── meeting_frameworks.md       # Next-gen education and DAF management protocols
 
 ```
 
